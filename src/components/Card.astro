@@ -3,14 +3,14 @@ interface Props {
     name: string;
     position: string;
     aboutMe: string;
-    linkedin: string;
+    portfolioLink: string;
     github: string;
-    telegram: string;
+    instagram: string;
     twitterx: string;
-    cvLink: string
+    blogLink: string
 }
 
-const {name, position, aboutMe, linkedin, github, telegram, twitterx, cvLink } = Astro.props;
+const {name, position, aboutMe, portfolioLink, github, instagram, twitterx, blogLink } = Astro.props;
 
 import { Image } from 'astro:assets';	  
 import profileImage from '/src/images/icon.jpeg';
@@ -31,11 +31,11 @@ import profileImage from '/src/images/icon.jpeg';
             <h2>{position}</h2>
             <p>{aboutMe}</p>
             <div class="icons">
-                <a href={linkedin} class="hover-text" target="_blank">
+                <a href={portfolioLink} class="hover-text" target="_blank">
                     <span class="tooltip-text" id="fade">
-                        LinkedIn
+                        Portfolio
                     </span>
-                    <i class="bi bi-linkedin"></i>
+                    <i class="bi bi-person-circle"></i>
                 </a>
                 <a href={github} class="hover-text" target="_blank">
                     <span class="tooltip-text" id="fade">
@@ -43,23 +43,23 @@ import profileImage from '/src/images/icon.jpeg';
                     </span>
                     <i class="bi bi-github"></i>
                 </a>
-                <a href={telegram} class="hover-text" target="_blank">
-                    <span class="tooltip-text" id="fade">
-                        Telegram
-                    </span>
-                    <i class="bi bi-telegram"></i>
-                </a>
                 <a href={twitterx} class="hover-text" target="_blank">
                     <span class="tooltip-text" id="fade">
                         Twitter/X
                     </span>
                     <i class="bi bi-twitter-x"></i>
                 </a>
-                <a href={cvLink} class="hover-text" target="_blank">
+                <a href={instagram} class="hover-text" target="_blank">
                     <span class="tooltip-text" id="fade">
-                        Resume
+                        Instagram
                     </span>
-                    <i class="bi bi-file-earmark-arrow-down"></i>
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href={blogLink} class="hover-text" target="_blank">
+                    <span class="tooltip-text" id="fade">
+                        Blog
+                    </span>
+                    <i class="bi bi-substack"></i>
                 </a>
             </div>
         </div>
